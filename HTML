@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoCodeX - Login + Project Save</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 AutoCodeX Platform</h1>
+    
+    <div id="auth">
+      <input id="email" type="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Password" />
+      <button onclick="signUp()">Sign Up</button>
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="project-section" style="display:none;">
+      <h2>Create Project</h2>
+      <input id="title" type="text" placeholder="Project Title" />
+      <textarea id="bundle" placeholder="Paste your 18-code JSON here..."></textarea>
+      <button onclick="save()">Save Project</button>
+      <button onclick="load()">Load Projects</button>
+      <pre id="output"></pre>
+    </div>
+  </div>
+</body>
+</html>
