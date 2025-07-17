@@ -2,30 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AutoCodeX - Login + Project Save</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoCodeX - App Builder</title>
   <link rel="stylesheet" href="style.css" />
-  <script type="module" src="script.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <h1>🚀 AutoCodeX Platform</h1>
-    
-    <div id="auth">
-      <input id="email" type="email" placeholder="Email" />
-      <input id="password" type="password" placeholder="Password" />
-      <button onclick="signUp()">Sign Up</button>
-      <button onclick="login()">Login</button>
-    </div>
+  <header>
+    <h1>AutoCodeX - AI App Builder</h1>
+  </header>
 
-    <div id="project-section" style="display:none;">
-      <h2>Create Project</h2>
-      <input id="title" type="text" placeholder="Project Title" />
-      <textarea id="bundle" placeholder="Paste your 18-code JSON here..."></textarea>
-      <button onclick="save()">Save Project</button>
-      <button onclick="load()">Load Projects</button>
-      <pre id="output"></pre>
-    </div>
-  </div>
+  <main>
+    <section class="bundle-list">
+      <h2>18 Code Bundles (Auto Generated)</h2>
+      <ul id="bundleContainer"></ul>
+    </section>
+
+    <section class="actions">
+      <button onclick="downloadZip()">📦 Download Web App</button>
+      <button onclick="downloadZip()">📲 Download Android Zip</button>
+      <button onclick="downloadZip()">🌐 Download Web Zip</button>
+      <button onclick="resetBundles()">♻️ Reset</button>
+      <button onclick="shareApp()">🔗 Share</button>
+      <button onclick="openChat()">💬 Chat with AI</button>
+      <button onclick="joinChatroom()">🧑‍🤝‍🧑 Chatroom</button>
+    </section>
+
+    <section class="preview">
+      <h2>Live Preview</h2>
+      <iframe id="previewFrame" srcdoc="<h3>Live Preview Area</h3>" frameborder="0"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>Powered by AutoCodeX | Made by Suresh Prajapati</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
